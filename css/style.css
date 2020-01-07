@@ -1,0 +1,59 @@
+body {
+    background: #26262e;
+    color: whitesmoke;
+    scroll
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+}
+
+.gift-bubble {
+    height: 550px;
+    box-shadow: inset 0px 0px 45px 7px #26262e;
+    background: whitesmoke;
+}
+
+.right-arrow,
+.left-arrow {
+    font-size: 100px;
+    color: whitesmoke;
+}
+
+.right-arrow:hover,
+.left-arrow:hover {
+    font-size: 110px;
+    transition: 0.3s;
+}
+
+.left-arrow {
+    transform: rotate(180deg);
+}
+
+.home-btns {
+    font-family: 'Fredoka One', cursive;
+    color: #26262e;
+    position: absolute;
+    top: -110px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: whitesmoke;
+    border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+.gift-bubble {
+    animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes float {
+    0%   {top:-25px;}
+    50%  {top:-50px;}
+    100% {top:-25px;}
+}

@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import GiftBubble from "./components/GiftBubble";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import RecipientsBar from "./components/RecipientsBar";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <GiftBubble/>
         {/* <Login/> */}
         {/* <SignUp/> */}
+        {/* <RecipientsBar/> */}
       </div>
     </div>
   );

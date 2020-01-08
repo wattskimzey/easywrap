@@ -8,6 +8,10 @@ body {
     font-size: 60px;
 }
 
+.font-custom {
+    font-family: 'Fredoka One', cursive;
+}
+
 .gift-bubble {
     height: 550px;
     box-shadow: inset 0px 0px 45px 7px #26262e;

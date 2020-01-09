@@ -5,7 +5,7 @@ function RecipientsBar() {
         <div className="font-custom">
         <div className="row pb-0">
             <div className="col-8 text-right">
-                <h5 className="pl-2 text-left">Saved Recipients <i class="fas fa-users"></i></h5>
+                <h5 className="pl-2 text-left">Saved Recipients <i className="fas fa-users"></i></h5>
             </div>
             <div className="col-4 text-right">
                 <button className="btn btn-sm btn-primary">Add Recipient</button>

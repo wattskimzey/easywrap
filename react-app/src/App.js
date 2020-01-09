@@ -9,7 +9,7 @@ import GiftBubble from "./components/GiftBubble";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import RecipientsBar from "./components/RecipientsBar";
-import Question from "./components/Question";
+import Recommender from "./components/Recommender";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         {/* <Login/> */}
         {/* <SignUp/> */}
         <RecipientsBar/>
-        <Question/>
+        <Recommender/>
       </div>
     </div>
   );

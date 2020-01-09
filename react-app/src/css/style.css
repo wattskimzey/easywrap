@@ -1,10 +1,14 @@
 body {
     background: #26262e;
     color: whitesmoke;
-    scroll
 }
 
-h1 {
+.navbar-brand {
+    font-family: 'Fredoka One', cursive;
+    font-size: 60px;
+}
+
+.font-custom {
     font-family: 'Fredoka One', cursive;
 }
 
@@ -56,4 +60,9 @@ h1 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     cursor: pointer;
+}
+
+.link:hover {
+    font-size: larger;
+    transition: 0.3s;
 }

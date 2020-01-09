@@ -9,16 +9,18 @@ import GiftBubble from "./components/GiftBubble";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import RecipientsBar from "./components/RecipientsBar";
+import Question from "./components/Question";
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
       <div className="container-fluid">
-        <GiftBubble/>
+        {/* <GiftBubble/> */}
         {/* <Login/> */}
         {/* <SignUp/> */}
-        {/* <RecipientsBar/> */}
+        <RecipientsBar/>
+        <Question/>
       </div>
     </div>
   );

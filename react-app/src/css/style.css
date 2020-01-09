@@ -66,3 +66,7 @@ body {
     font-size: larger;
     transition: 0.3s;
 }
+
+label {
+    font-size: 30px;
+}

@@ -1,28 +1,31 @@
-import React from 'react';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import './css/animation.css';
 // import './css/bootstrap-lumen.css';
 import './css/style.css';
 import Navbar from "./components/Navbar";
-import GiftBubble from "./components/GiftBubble";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import RecipientsBar from "./components/RecipientsBar";
-import Recommender from "./components/Recommender";
+import Home from "./Pages/Home";
+import Profile from "./Pages/Profile";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <div className="container-fluid">
-        {/* <GiftBubble/> */}
-        {/* <Login/> */}
-        {/* <SignUp/> */}
-        <RecipientsBar/>
-        <Recommender/>
+    <Router>
+      <div className="App">
+        <Navbar/>
+        <Switch>
+          <div className="container-fluid">
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/profile" component={Profile} />
+          </div>
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
 

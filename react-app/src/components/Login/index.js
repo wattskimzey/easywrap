@@ -14,9 +14,9 @@ function Login() {
                             <input className="form-control" type="password" placeholder="password"/>
                         </div>
                         <button className="btn btn-block btn-lg btn-primary">Submit</button>
-                        <button className="btn btn-block btn-secondary"><i class="fas fa-caret-left"></i> Back</button>
+                        <a href="/" className="btn btn-block btn-secondary"><i class="fas fa-caret-left"></i> Back</a>
                     </form>
-                    <a href="#">Sign Up</a>
+                    <a href="/signup">Sign Up</a>
                 </div>
             </div>
         </div>

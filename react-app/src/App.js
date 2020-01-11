@@ -1,9 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import logo from './logo.svg';
 import './App.css';
 import './css/animation.css';
-// import './css/bootstrap-lumen.css';
 import './css/style.css';
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";

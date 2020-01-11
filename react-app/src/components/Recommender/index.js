@@ -80,7 +80,7 @@ class Recommender extends React.Component {
                                 <h2 className="display-4 float-right">$55.99</h2>
                             </div>
                             <div className="col-12">
-                                <a href="#" className="btn btn-primary btn-block btn-lg">Want it?</a>
+                                <a href="/" className="btn btn-primary btn-block btn-lg">Want it?</a>
                                 <button className="btn btn-danger btn-block btn-lg">Nah, next gift</button>
                             </div>
                         </div>

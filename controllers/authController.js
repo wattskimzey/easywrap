@@ -21,5 +21,11 @@ module.exports = {
     login: passport.authenticate("local", {
       successRedirect: "/profile",
       failureRedirect: "/login"
-    }), function(req, res) {}
+    }), function(req, res) {},
+
+    logout: function(req, res) {
+      // console.log("SUCCESS");
+      req.logout();
+      res.redirect("/");
+    }
 }

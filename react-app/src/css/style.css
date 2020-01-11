@@ -62,9 +62,13 @@ body {
     cursor: pointer;
 }
 
-.link:hover {
-    font-size: larger;
-    transition: 0.3s;
+/* .link:hover { */
+    /* font-size: larger; */
+    /* transition: 0.3s; */
+/* } */
+
+.red-btn:hover {
+    color: #9c2430 !important;
 }
 
 label {

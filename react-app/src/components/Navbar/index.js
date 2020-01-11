@@ -14,11 +14,11 @@ class Navbar extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto pr-5">
                     <li className="nav-item active">
-                    <a className="nav-link text-success link" href="/login"><i className="fas fa-user-plus fa-2x"></i> <span className="sr-only">(current)</span></a>
+                        <a className="nav-link text-success link" href="/login"><i className="fas fa-user-plus fa-2x"></i> <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item active">
                         <form action="/api/auth/logout" method="POST">
-                            <button className="nav-link btn btn-transparent text-danger link"><i className="fas fa-user-times fa-2x"></i> <span className="sr-only">(current)</span></button>
+                            <button className="nav-link btn btn-transparent text-danger link red-btn"><i className="fas fa-user-times fa-2x"></i> <span className="sr-only">(current)</span></button>
                         </form>
                     </li>
                 </ul>

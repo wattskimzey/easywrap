@@ -17,4 +17,9 @@ module.exports = {
             })
           });
     },
+
+    login: passport.authenticate("local", {
+      successRedirect: "/profile",
+      failureRedirect: "/login"
+    }), function(req, res) {}
 }

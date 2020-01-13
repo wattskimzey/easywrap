@@ -62,15 +62,18 @@ body {
     cursor: pointer;
 }
 
-/* .link:hover { */
-    /* font-size: larger; */
-    /* transition: 0.3s; */
-/* } */
-
 .red-btn:hover {
     color: #9c2430 !important;
 }
 
 label {
     font-size: 30px;
+}
+
+.slider::-webkit-slider-thumb {
+    background: #ffc107;
+}
+
+.budget-value {
+    font-size: 20px;
 }

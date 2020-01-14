@@ -71,9 +71,14 @@ label {
 }
 
 .slider::-webkit-slider-thumb {
-    background: #ffc107;
+    background: #dc3545;
 }
 
 .budget-value {
     font-size: 20px;
+}
+
+.description {
+    max-height: 125px;
+    overflow: scroll;
 }

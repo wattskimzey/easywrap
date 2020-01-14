@@ -27,5 +27,15 @@ module.exports = {
       // console.log("SUCCESS");
       req.logout();
       res.redirect("/");
+    },
+
+    getAuthStatus: function(req, res) {
+      // res.json("SUCCESS");
+
+      if (req.user) {
+        res.json(req.user);
+      } else {
+        res.json("no user");
+      }
     }
 }

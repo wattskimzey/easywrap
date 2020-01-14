@@ -10,4 +10,7 @@ router.route("/login")
 router.route("/logout")
   .post(authController.logout);
 
+router.route("/getAuthStatus")
+  .get(authController.getAuthStatus);
+
 module.exports = router;

@@ -13,16 +13,16 @@ function RecipientsBar() {
         </div>
             <div className="row border-bottom border-light py-2 mt-2 border-top">
                 <div className="col-1 text-center">
-                    <a href="#" className="text-light"><i className="fas fa-user"></i> Person</a>
+                    <a href="/" className="text-light"><i className="fas fa-user"></i> Person</a>
                 </div>
                 <div className="col-1 text-center">
-                    <a href="#" className="text-light"><i className="fas fa-user"></i> Person</a>
+                    <a href="/" className="text-light"><i className="fas fa-user"></i> Person</a>
                 </div>
                 <div className="col-1 text-center">
-                    <a href="#" className="text-light"><i className="fas fa-user"></i> Person</a>
+                    <a href="/" className="text-light"><i className="fas fa-user"></i> Person</a>
                 </div>
                 <div className="col-1 text-center">
-                    <a href="#" className="text-light"><i className="fas fa-user"></i> Person</a>
+                    <a href="/" className="text-light"><i className="fas fa-user"></i> Person</a>
                 </div>
             </div>
         </div>

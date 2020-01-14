@@ -1,26 +1,29 @@
 import React from "react";
 
-function SignUp() {
-    return(
-        <div>
-            <div className="row justify-content-center font-custom">
-                <div className="col-lg-4 text-left">
-                    <h1 className="display-3 text-center">S I G N U P</h1>
-                    <form>
-                        <div className="form-group">
-                            <input className="form-control" type="text" placeholder="username"/>
-                        </div>
-                        <div className="form-group">
-                            <input className="form-control" type="password" placeholder="password"/>
-                        </div>
-                        <button className="btn btn-block btn-lg btn-primary">Submit</button>
-                        <button className="btn btn-block btn-secondary"><i class="fas fa-caret-left"></i> Back</button>
-                    </form>
-                    <a href="#">Login</a>
+class SignUp extends React.Component {
+
+    render() {
+        return(
+            <div>
+                <div className="row justify-content-center font-custom">
+                    <div className="col-lg-4 text-left">
+                        <h1 className="display-3 text-center">S I G N U P</h1>
+                        <form action="/api/auth/signup" method="POST" >
+                            <div className="form-group">
+                                <input className="form-control" type="text" name="username" placeholder="username" id="signup-username" />
+                            </div>
+                            <div className="form-group">
+                                <input className="form-control" type="password" name="password" placeholder="password" id="signup-password" />
+                            </div>
+                            <button className="btn btn-block btn-lg btn-primary">Submit</button>
+                            <a href="/" className="btn btn-block btn-secondary"><i className="fas fa-caret-left"></i> Back</a>
+                        </form>
+                        <a href="/login">Login</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default SignUp;

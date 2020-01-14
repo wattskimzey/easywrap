@@ -3,7 +3,10 @@ import React from "react";
 class Recommender extends React.Component {
 
     state = {
-        currentQuestion: 1
+        currentQuestion: 1,
+        occasion: "",
+        interests: "",
+        budget: 20
     }
 
     nextQuestion = () => {
@@ -25,6 +28,17 @@ class Recommender extends React.Component {
         document.getElementById("gift-result").classList.remove("d-none");
     }
 
+    // Handle Question Inputs
+    handleBudget = event => {
+        this.setState({budget: event.target.value});
+    }
+    handleInterests = event => {
+        this.setState({interests: event.target.value});
+    }
+    handleOccassion = event => {
+        this.setState({occasion: event.target.value});
+    }
+
     render() {
         return(
             <div>
@@ -32,9 +46,9 @@ class Recommender extends React.Component {
                 <form className="font-custom mt-3">
                     <div className="row mb-3">
                         <div className="col-lg-4 slide-in-right" id="q1">
-                            <label htmlFor="occassion" className="text-primary">What's the occasion?</label>
+                            <label htmlFor="occasion" className="text-primary">What's the occasion?</label>
                             <div className="input-group">
-                                <input type="text" name="occassion" className="form-control"/>
+                                <input type="text" name="occasion" className="form-control" value={this.state.occasion} onChange={this.handleOccassion} />
                                 <div className="input-group-append">
                                     <button className="btn btn-primary" type="button" onClick={this.nextQuestion}>Next</button>
                                 </div>
@@ -43,7 +57,7 @@ class Recommender extends React.Component {
                         <div className="col-lg-4 slide-in-right d-none" id="q2">
                             <label htmlFor="interests" className="text-success">What are they into?</label>
                             <div className="input-group">
-                                <input type="text" name="interests" className="form-control" />
+                                <input type="text" name="interests" className="form-control" value={this.state.interests} onChange={this.handleInterests} />
                                 <div className="input-group-append">
                                     <button className="btn btn-success" type="button" onClick={this.nextQuestion}>Next</button>
                                 </div>
@@ -52,8 +66,9 @@ class Recommender extends React.Component {
                         </div>
                         <div className="col-lg-4 slide-in-right d-none" id="q3">
                             <div className="form-group">
-                                <label htmlFor="price" className="text-warning">Have a budget?</label>
-                                <input type="range" name="price" className="custom-range" id="customRange1"/>
+                                <label htmlFor="buget" className="text-warning">Have a budget?</label>
+                                <input type="range" name="buget" className="custom-range slider" min="1" max="1000" value={this.state.budget} id="budget" onChange={this.handleBudget} />
+                                <p className="float-left budget-value">${this.state.budget} </p>
                                 <button className="btn btn-outline-warning float-right" onClick={this.submitQuestions}>Submit</button>
                             </div>
                         </div>
@@ -80,7 +95,7 @@ class Recommender extends React.Component {
                                 <h2 className="display-4 float-right">$55.99</h2>
                             </div>
                             <div className="col-12">
-                                <a href="#" className="btn btn-primary btn-block btn-lg">Want it?</a>
+                                <a href="/" className="btn btn-primary btn-block btn-lg">Want it?</a>
                                 <button className="btn btn-danger btn-block btn-lg">Nah, next gift</button>
                             </div>
                         </div>

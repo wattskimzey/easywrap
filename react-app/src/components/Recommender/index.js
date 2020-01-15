@@ -4,6 +4,7 @@ class Recommender extends React.Component {
 
     state = {
         currentQuestion: 1,
+        recipient: "",
         occasion: "",
         interests: "",
         budget: 20
@@ -41,6 +42,9 @@ class Recommender extends React.Component {
     handleOccassion = event => {
         this.setState({occasion: event.target.value});
     }
+    handleRecipient = event => {
+        this.setState({recipient: event.target.value});
+    }
 
     render() {
         return(
@@ -49,9 +53,9 @@ class Recommender extends React.Component {
                 <form className="font-custom mt-3">
                     <div className="row mb-3">
                         <div className="col-lg-3 slide-in-right" id="q1">
-                            <label htmlFor="occasion" className="text-primary">Who's it for?</label>
+                            <label htmlFor="recipient" className="text-primary">Who's it for?</label>
                             <div className="input-group">
-                                <input type="text" name="occasion" className="form-control" value={this.state.occasion} onChange={this.handleOccassion} />
+                                <input type="text" name="recipient" className="form-control" value={this.state.recipient} onChange={this.handleRecipient} />
                                 <div className="input-group-append">
                                     <button className="btn btn-primary" type="button" onClick={this.nextQuestion}>Next</button>
                                 </div>
@@ -112,6 +116,7 @@ class Recommender extends React.Component {
                             <div className="col-12">
                                 <a href="/" className="btn btn-primary btn-block btn-lg">Want it?</a>
                                 <button className="btn btn-danger btn-block btn-lg">Nah, next gift</button>
+                                <button className="btn btn-outline-success btn-lg mt-2 float-right">Save <i className="fas fa-thumbs-up"></i></button>
                             </div>
                         </div>
                     </div>

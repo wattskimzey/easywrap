@@ -1,6 +1,23 @@
 import React from "react";
+import API from "../../utils/API";
 
-function GiftBubble() {
+class GiftBubble extends React.Component {
+
+    state = {
+        gift: ""
+    }
+
+    componentDidMount() {
+        API.getHomeGift()
+        .then((response)=>{
+            console.log(response.data)
+        })
+        .catch((error)=>{
+          console.log(error)
+        })
+      }
+
+    render(){
     return(
         <div>
             <div className="row justify-content-center align-items-center">
@@ -28,6 +45,7 @@ function GiftBubble() {
 
         </div>
     )
+    }
 }
 
 export default GiftBubble;

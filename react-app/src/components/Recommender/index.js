@@ -1,8 +1,10 @@
 import React from "react";
+import API from "../../utils/API";
 
 class Recommender extends React.Component {
 
     state = {
+        gifts: [],
         currentQuestion: 1,
         occasion: "",
         interests: "",
@@ -29,6 +31,7 @@ class Recommender extends React.Component {
     submitQuestions = (e) => {
         e.preventDefault();
         document.getElementById("gift-result").classList.remove("d-none");
+        this.getGifts();
     }
 
     // Handle Question Inputs
@@ -41,6 +44,19 @@ class Recommender extends React.Component {
     handleOccassion = event => {
         this.setState({occasion: event.target.value});
     }
+
+    getGifts = () => {
+        API.getSearchGift(this.state.interests)
+          .then((response) =>{
+            console.log(response.data)
+            // this.setState({
+            //   gifts: response.data
+            // })
+            
+        }
+          )
+          .catch(error => console.log(error));
+      };
 
     render() {
         return(

@@ -8,26 +8,39 @@ class GiftBubble extends React.Component {
     }
 
     componentDidMount() {
+        this.nextGift();
+      }
+
+    nextGift = () => {
         API.getHomeGift()
-        .then((response)=>{
-            console.log(response.data)
+        .then(response => {
+            document.getElementById("loading-home").classList.remove("d-none");
+            document.getElementById("gift-bubble").classList.add("d-none");
+
+            var imageSrc = response.data[0].img.split("Image: ");
+            document.getElementById("gift-bubble").src = imageSrc[1];
+
+            document.getElementById("gift-bubble").classList.remove("d-none");
+            document.getElementById("loading-home").classList.add("d-none");
         })
-        .catch((error)=>{
+        .catch(error => {
           console.log(error)
         })
-      }
+    }
 
     render(){
     return(
         <div>
             <div className="row justify-content-center align-items-center">
                 <div className="col-3 text-center">
-                    <button className="btn btn-transparent"><i className="fas fa-play left-arrow" /></button>
+                    <button className="btn btn-transparent" onClick={this.nextGift}><i className="fas fa-play left-arrow" /></button>
                 </div>
                 <div className="col-5 gift-bubble rounded rounded-circle">
+                    <img id="gift-bubble" className="d-none" src={"https://assurancemortgage.com/wp-content/uploads/2019/06/loading.gif"} alt="gift" />
+                    <img id="loading-home" src={"https://assurancemortgage.com/wp-content/uploads/2019/06/loading.gif"} alt="gift" />
                 </div>
                 <div className="col-3 text-center">
-                    <button className="btn btn-transparent"><i className="fas fa-play right-arrow" /></button>
+                    <button className="btn btn-transparent" onClick={this.nextGift}><i className="fas fa-play right-arrow" /></button>
                 </div>
             </div>
 

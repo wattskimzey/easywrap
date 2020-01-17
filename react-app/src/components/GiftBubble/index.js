@@ -17,6 +17,9 @@ class GiftBubble extends React.Component {
             document.getElementById("loading-home").classList.remove("d-none");
             document.getElementById("gift-bubble").classList.add("d-none");
 
+            var link = response.data[0].link.split("Link:");
+            document.getElementById("gift-link").href = link[1];
+
             var imageSrc = response.data[0].img.split("Image: ");
             document.getElementById("gift-bubble").src = imageSrc[1];
 
@@ -47,11 +50,11 @@ class GiftBubble extends React.Component {
             <div className="row position-relative">
                 <div className="col-1"></div>
                 <div className="col-2">
-                    <button className="btn btn-lg btn-block btn-light py-3 rounded rounded-pill home-btns">Want More?</button>
+                    <a href="/" target="blank" id="gift-link" className="btn btn-lg btn-block btn-light py-3 rounded rounded-pill home-btns">Want it?</a>
                 </div>
                 <div className="col-6"></div>
                 <div className="col-2">
-                    <button className="btn btn-lg btn-block btn-light py-3 rounded rounded-pill home-btns">Love It?</button>
+                    <a href="/login" className="btn btn-lg btn-block btn-light py-3 rounded rounded-pill home-btns">Show me more!</a>
                 </div>
                 <div className="col-1"></div>
             </div>

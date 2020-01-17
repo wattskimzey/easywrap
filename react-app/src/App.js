@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
+import Saved from "./components/Saved";
 
 class App extends React.Component {
 
@@ -49,6 +50,7 @@ class App extends React.Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/profile" component={Profile} />
+              <Route exact path="/saved" component={Saved} />
             </div>
           </Switch>
         </div>

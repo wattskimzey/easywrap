@@ -9,8 +9,8 @@ home: function(req,res){
         "headers":{
         "content-type":"application/octet-stream",
         "x-rapidapi-host":"axesso-axesso-amazon-data-service-v1.p.rapidapi.com",
-        "x-rapidapi-key":""
-        },"params":{
+        "x-rapidapi-key": "d3e3d8dc41msh479127268b4732dp1b4f84jsn743b517019dc"
+      },"params":{
         "sortBy":"relevanceblender",
         "numberOfProducts":"10",
         "domainCode":"com",
@@ -50,13 +50,14 @@ home: function(req,res){
 },
 search: function(req,res){
     const { query: params } = req;
+    // var params = req.body;
     axios({
         "method":"GET",
         "url":"https://axesso-axesso-amazon-data-service-v1.p.rapidapi.com/amz/amazon-search-by-keyword",
         "headers":{
         "content-type":"application/octet-stream",
         "x-rapidapi-host":"axesso-axesso-amazon-data-service-v1.p.rapidapi.com",
-        "x-rapidapi-key":""
+        "x-rapidapi-key": "d3e3d8dc41msh479127268b4732dp1b4f84jsn743b517019dc"
         },"params":{
         "sortBy":"relevanceblender",
         "numberOfProducts":"10",

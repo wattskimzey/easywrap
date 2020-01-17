@@ -37,7 +37,6 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
-          {/* <Navbar/> */}
           <Switch>
             <div className="container-fluid">
               <Route 

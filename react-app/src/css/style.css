@@ -1,6 +1,6 @@
 body {
     background: #26262e;
-    color: whitesmoke;
+    color: white;
 }
 
 .navbar-brand {
@@ -12,16 +12,10 @@ body {
     font-family: 'Fredoka One', cursive;
 }
 
-.gift-bubble {
-    height: 550px;
-    box-shadow: inset 0px 0px 45px 7px #26262e;
-    background: whitesmoke;
-}
-
 .right-arrow,
 .left-arrow {
     font-size: 100px;
-    color: whitesmoke;
+    color: white;
 }
 
 .right-arrow:hover,
@@ -53,7 +47,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: whitesmoke;
+    background: white;
     border-radius: 100px;
 }
 
@@ -81,4 +75,34 @@ label {
 .description {
     max-height: 125px;
     overflow: scroll;
+}
+
+.gift-bubble {
+    height: 550px;
+    box-shadow: inset 0px 0px 35px 7px #26262e;
+    background: white;
+    position: relative;
+}
+
+#gift-bubble {
+    max-width: 350px;
+    max-height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5%;
+}
+
+#loading-home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#gift-image {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 5px;
 }

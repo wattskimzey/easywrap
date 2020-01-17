@@ -19,9 +19,9 @@ class Navbar extends React.Component {
                     <li className={this.props.user === "no user" ? "nav-item active" : "d-none"}>
                         <a className="nav-link text-success link" href="/login"><i className="fas fa-user-plus fa-2x"></i> <span className="sr-only">(current)</span></a>
                     </li>
-                    {/* <li className={this.props.user === "no user" ? "d-none" : "nav-item active"}>
+                    <li className={this.props.user === "no user" ? "d-none" : "nav-item active"}>
                         <a className="nav-link text-success link" href="/saved"><i className="fas fa-thumbs-up fa-2x"></i> <span className="sr-only">(current)</span></a>
-                    </li> */}
+                    </li>
                     <li className={this.props.user === "no user" ? "d-none" : "nav-item active"}>
                         <form action="/api/auth/logout" method="POST">
                             <button className="nav-link btn btn-transparent text-danger link red-btn"><i className="fas fa-user-times fa-2x"></i> <span className="sr-only">(current)</span></button>

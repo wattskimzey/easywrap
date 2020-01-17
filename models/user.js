@@ -8,6 +8,12 @@ var UserSchema = new mongoose.Schema({
     },
     password: {
         type: String
+    },
+    gifts: {
+        type: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Gift"
+        }]
     }
 });
 

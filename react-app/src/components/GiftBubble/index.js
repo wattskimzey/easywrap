@@ -1,6 +1,8 @@
 import React from "react";
 import API from "../../utils/API";
 
+function randomNum(){return Math.floor(Math.random() * 5 + 1)}
+
 class GiftBubble extends React.Component {
 
     state = {
@@ -12,15 +14,16 @@ class GiftBubble extends React.Component {
       }
 
     nextGift = () => {
+        let num = randomNum();
         API.getHomeGift()
         .then(response => {
             document.getElementById("loading-home").classList.remove("d-none");
             document.getElementById("gift-bubble").classList.add("d-none");
 
-            var link = response.data[0].link.split("Link:");
+            var link = response.data[num].link.split("Link:");
             document.getElementById("gift-link").href = link[1];
 
-            var imageSrc = response.data[0].img.split("Image: ");
+            var imageSrc = response.data[num].img.split("Image: ");
             document.getElementById("gift-bubble").src = imageSrc[1];
 
             document.getElementById("gift-bubble").classList.remove("d-none");

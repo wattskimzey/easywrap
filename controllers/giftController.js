@@ -1,6 +1,7 @@
 const axios = require("axios");
-const homeArray = ["Clothing & Shoes", "Jewelry & Watches", "Home & Kitchen", "Books", "Electronics"]
+const homeArray = ["nintendo switch", "laptop", "water bottle", "headphones", "books", "tv", "kindle", "ipad", "backpack","desk","air fryer","alexa"]
 const db = require("../models")
+function randomNum(){return Math.floor(Math.random() * 12)}
 
 module.exports = {
   home: function (req, res) {
@@ -10,10 +11,10 @@ module.exports = {
         "headers": {
           "content-type": "application/octet-stream",
           "x-rapidapi-host": "amazon-price1.p.rapidapi.com",
-          "x-rapidapi-key": "3dd4500085msh5885eeb6f5d4bdfp10871ajsn71074949a91a"
+          "x-rapidapi-key": process.env.REACT_APP_API_KEY
         },
         "params": {
-          "keywords": homeArray[Math.floor(Math.random() * 5)],
+          "keywords": homeArray[randomNum()],
           "marketplace": "US"
         }
       })
@@ -53,7 +54,7 @@ module.exports = {
         "headers": {
           "content-type": "application/octet-stream",
           "x-rapidapi-host": "amazon-price1.p.rapidapi.com",
-          "x-rapidapi-key": "3dd4500085msh5885eeb6f5d4bdfp10871ajsn71074949a91a"
+          "x-rapidapi-key": process.env.REACT_APP_API_KEY
         },
         "params": {
           "keywords": params,

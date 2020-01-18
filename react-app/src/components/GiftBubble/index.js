@@ -62,6 +62,10 @@ class GiftBubble extends React.Component {
                 <div className="col-1"></div>
             </div>
 
+            <div className="row position-relative">
+                <p className="font-custom2">Easy Wrap makes choosing a gift super easy! Just type in what the giftee is into. Easy Wrap will suggest a nice gift, and you can either click to purchase or choose another gift.  It's that easy!</p>
+            </div>
+
         </div>
     )
     }

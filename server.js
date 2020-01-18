@@ -41,7 +41,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Connect to MongoDB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user1:Luvisrage2@ds239967.mlab.com:39967/heroku_0qvnxppl";
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user1:Luvisrage2@ds239967.mlab.com:39967/heroku_0qvnxppl";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/easywrap";
 mongoose.connect(MONGODB_URI);
 
 // Routes ***

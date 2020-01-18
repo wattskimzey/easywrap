@@ -53,7 +53,7 @@ class Saved extends React.Component {
                                 </div>
                                 <div className="col-12">
                                     <a href={gift.link} target="blank" id="gift-link" className="btn btn-primary btn-block btn-lg">Take me to it!</a>
-                                    <button className="btn btn-outline-danger btn-lg mt-2 float-right" id={gift._id} onClick={this.deleteGift(gift._id)}>Delete Gift! <i className="fas fa-thumbs-down"></i></button>
+                                    <button className="btn btn-outline-danger btn-lg mt-2 float-right" id={gift._id} onClick={() => this.deleteGift(gift._id)}>Delete Gift! <i className="fas fa-thumbs-down"></i></button>
                                 </div>
                             </div>
                         </div>    

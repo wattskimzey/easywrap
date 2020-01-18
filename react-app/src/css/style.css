@@ -11,6 +11,10 @@ body {
 .font-custom {
     font-family: 'Fredoka One', cursive;
 }
+.font-custom2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px
+}
 
 .right-arrow,
 .left-arrow {
